@@ -420,3 +420,22 @@ header{
         top: 280px;
     }
 }
+
+@media screen and (max-width: 765px) {
+    .banner-wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .banner-img-wrapper{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .banner-img{
+        width: 30%;
+        position: relative;
+        top: 50px;
+    }
+    .banner-text h1{
+        font-size: 40px;
+    }
+}
