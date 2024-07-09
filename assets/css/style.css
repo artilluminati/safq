@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --main-primary: #CCDD34;
+    --main-secondary: #90A1EC;
+    --main-bg: #F6F9E9;
+    --main-text: #121504;
+    --main-accent: #E1E2D8;
+
+    --font-family: "Inter", sans-serif;
+    --second-family: "Montserrat", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: var(--main-bg);
+    font-family: "Montserrat", sans-serif;
+    color: var(--main-text);
+    transition: all 0.3s ease-in-out;
+}
+
+button, input{
+    font-family: "Montserrat", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: var(--main-text);
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+main > section{
+    margin-block: 150px;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.button-main{
+    cursor: pointer;
+    border: 2px solid var(--main-accent);
+    border-radius: 10px;
+    background: var(--main-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    padding: 15px 25px;
+}
+
+.heading-main{
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--main-text);
+    text-align: left;
+}
+
+
+/* header */
+header{
+    border-bottom: 1px solid var(--main-accent);
+    position: absolute;
+    width: 100%;
+    background: var(--main-bg);
+}
+.header-wrapper{
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.logo-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.logo-wrapper img{
+    height: 32px;
+}
+.logo-text{
+    font-family: var(--second-family);
+    font-weight: 800;
+    font-size: 40px;
+    letter-spacing: 0.07em;
+    text-align: center;
+    color: #ccdd34;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 60px;
+}
+.header-nav nav{
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.07em;
+    text-align: center;
+    color: #000;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.account-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: var(--main-accent) solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+
+/* banner */
+
+.banner-container{
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.banner-down-icon{
+    margin: 80px auto 40px auto; 
+}
+
+.banner-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.banner-img{
+    transform: scaleX(-1);
+}
+.banner-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    row-gap: 30px;
+}
+.banner-text h1{
+    font-family: var(--second-family);
+    font-weight: 800;
+    font-size: 60px;
+    letter-spacing: 0.05em;
+    color: var(--main-primary);
+}
+
+.banner-selector{
+    border: 2px solid var(--main-accent);
+    border-radius: 10px;
+    padding: 15px 25px;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--main-text);
+    display: flex;
+}
+.banner-selector select{
+    border: none;
+    background: none;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--main-text);
+    flex: 1;
+}
+
+.banner-selector select:active{
+    outline: none;
+}
+
+
+/* популярные самокаты */
+
+.popular-scooters{
+    margin-inline: calc((100vw - 1200px) / 2);
+    display: grid;
+    grid-template-columns: repeat(5, calc(33% - 20px));
+    grid-template-rows: 1fr;
+    gap: 24px;
+    overflow-x: scroll;
+}
+
+.ps-card-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* width: calc((1200px) / 3); */
+    row-gap: 30px;
+    margin-top: 200px;
+}
+.ps-card{
+    border: 2px solid var(--main-accent);
+    border-radius: 10px;
+    display: flex;
+    height: 650px;
+    flex-direction: column;
+    justify-content: flex-end;
+    row-gap: 15px;
+    padding: 30px 35px;
+    padding-bottom: 0px;
+}
+
+.ps-card-title{
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+    cursor: default;
+}
+
+.ps-card-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    bottom: 35px;
+    row-gap: 15px;
+}
+
+.ps-card-description{
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 24px;
+    color: #a9b0d0;
+}
+
+.ps-card-old-price{
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--main-primary);
+    text-decoration: line-through;
+    min-height: 29px;
+}
+
+.ps-card-price{
+    font-weight: 700;
+    font-size: 28px;
+    color: #90a1ec;
+}
+
+.ps-card-photo{
+    width: 100%;
+}
+.ps-card-photo img{
+    object-fit: contain;
+    width: 100%;
+    position: relative;
+    bottom: 50px;
+}
+
+.ps-badge{
+    position: relative;
+    top: 200px;
+    display: flex;
+    align-items: center;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 18px;
+    column-gap: 10px;
+}
+
+.ps-card-button{
+    background: none;
+    color: var(--main-primary);
+}
+
+.ps-card-promo .ps-card{
+    background: linear-gradient(180deg, #ccdd34 0%, #bdce25 100%);
+}
+.ps-card-promo .ps-card-description, .ps-card-promo .ps-card-price{
+    color: var(--main-bg);
+}
+.ps-card-promo .ps-card-old-price{
+    color: #90a1ec;
+}
+.ps-card-promo .ps-card-button{
+    background: #90A1EC;
+    color: var(--main-bg);
+}
+
+
+/* how to book */
+
+.htb-overlay{
+    z-index: 10;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.htb-overlay-heading{
+    padding-top: 140px;
+    max-width: 50%;
+    background: var(--main-bg);
+}
+
+.htb-overlay-second-block{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.htb-overlay-gradient{
+    height: 100px;
+    padding-top: 50px;
+    background: linear-gradient(180deg, #f5f9e9 20.5%, rgba(245, 249, 233, 0) 100%);
+}
+
+.htb-overlay-step{
+    padding-top: 140px;
+}
+
+.htb-overlay-step h4{
+    font-weight: 900;
+    font-size: 80px;
+}
+
+.htb-overlay-step p{
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--main-secondary);
+}
+
+.htb-layer{
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.htb-layer-img{
+    width: 33%;
+    margin-left: calc(100%/12);
+}
+
+/* форма подписки */
+
+.sub-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.sub-form p{
+    font-weight: 700;
+    font-size: 40px;
+}
+.sub-form form label{
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.sub-form input{
+    padding: 25px 30px;
+    border: 2px solid var(--main-accent);
+    border-radius: 10px;
+    background: none;
+    font-size: 28px;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.sub-form .button-main{
+    background: var(--main-secondary);
+    
+}
+
+.footer-copyright{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 0.07em;
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        padding-inline: 10px;
+    }
+    .popular-scooters{
+        grid-template-columns: repeat(5, calc(50% - 20px));
+        margin-inline: 10px;
+    }
+    .ps-card-wrapper{
+        margin-top: 300px;
+    }
+    .ps-card{
+        height: 800px;
+    }
+    .ps-badge{
+        top: 280px;
+    }
+}
